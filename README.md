@@ -7,6 +7,11 @@ A brief description of what this project does and who it's for.
 <img width="312" alt="Captura de Tela 2024-07-25 às 12 12 38" src="https://github.com/user-attachments/assets/db0a5c4c-0b2b-4a6a-be2f-5c2309165801">
 
 
+<img width="312" alt="Captura de Tela 2024-07-25 às 12 13 10" src="https://github.com/user-attachments/assets/00c8d916-362f-4ce2-b829-ab6fc944ca10">
+
+<img width="312" alt="Captura de Tela 2024-07-25 às 12 14 17" src="https://github.com/user-attachments/assets/87964051-2596-4efb-b63b-4ce39e72b32f">
+
+<img width="312" alt="Captura de Tela 2024-07-25 às 12 14 37" src="https://github.com/user-attachments/assets/35b3fb4c-4234-4c86-9669-00608179be4d">
 
 
 1. **Clone the repository:**
