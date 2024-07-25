@@ -6,10 +6,11 @@ A brief description of what this project does and who it's for.
 
 <img width="312" alt="Captura de Tela 2024-07-25 às 12 12 38" src="https://github.com/user-attachments/assets/db0a5c4c-0b2b-4a6a-be2f-5c2309165801">
 
-<img width="315" alt="Captura de Tela 2024-07-25 às 12 25 00" src="https://github.com/user-attachments/assets/3dcabbdc-437d-4417-b407-348d273a8a3a">
+<img width="312" alt="Captura de Tela 2024-07-25 às 12 13 10" src="https://github.com/user-attachments/assets/7edf644e-15a4-48b8-aa4b-8ca7015cc387">
 
+<img width="315" alt="Captura de Tela 2024-07-25 às 12 25 00" src="https://github.com/user-attachments/assets/69f649b0-9d4c-4a07-a69c-e606380e44e6">
 
-<img width="312" alt="Captura de Tela 2024-07-25 às 12 14 37" src="https://github.com/user-attachments/assets/35b3fb4c-4234-4c86-9669-00608179be4d">
+<img width="312" alt="Captura de Tela 2024-07-25 às 12 14 37" src="https://github.com/user-attachments/assets/de9b1985-814f-4715-b90a-e524fcf26d3b">
 
 
 1. **Clone the repository:**
