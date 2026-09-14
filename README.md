@@ -68,4 +68,5 @@ O projeto possui testes unitários para regras auxiliares e dados da aplicação
 Para executar:
 
 ```bash
-fvm flutter test
+ flutter test
+ ```
