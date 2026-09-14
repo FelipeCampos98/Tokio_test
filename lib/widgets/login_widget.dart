@@ -1,8 +1,10 @@
 import 'package:flutter_multi_formatter/flutter_multi_formatter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:tokio_test/api/firebase.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tokio_test/const/constant.dart';
+
 
 class LoginWidget extends StatefulWidget {
   const LoginWidget({super.key});
@@ -315,8 +317,8 @@ class _LoginWidgetState extends State<LoginWidget> {
               ),
             ),
           ),
-          Positioned(
-            bottom: 50,
+            Positioned(
+            bottom: 30,
             left: 0,
             right: 0,
             child: Center(
@@ -325,6 +327,43 @@ class _LoginWidgetState extends State<LoginWidget> {
                   Image.asset(
                     "assets/images/tokio-resolve-dark.png",
                     width: 125,
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      FaIcon(
+                        FontAwesomeIcons.facebook,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.instagram,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.linkedin,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      FaIcon(
+                        FontAwesomeIcons.xTwitter,
+                        color: Colors.white,
+                        size: 22,
+                      ),
+                    ],
                   ),
                 ],
               ),
