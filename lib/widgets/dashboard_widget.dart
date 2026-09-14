@@ -94,9 +94,26 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       itemBuilder: (context, index) {
                         return Row(
                           children: [
-                            DataBox(
-                                icon: cardData.CardDataData[index].icon,
-                                title: cardData.CardDataData[index].title),
+                           DataBox(
+                              icon: cardData.CardDataData[index].icon,
+                              title: cardData.CardDataData[index].title,
+                              onTap: () {
+                                if (cardData.CardDataData[index].title == 'Automovel') {
+                                  if (!kIsWeb) {
+                                    Navigator.pushNamed(
+                                      context,
+                                      '/web_view',
+                                      arguments: 'https://www.tokiomarine.com.br/seguros-vida/seguro-vida/?utm_source=google&utm_medium=cpc&utm_campaign=crho-tkm-gg-vida_individual-pmax-perfor-conv-aon&utm_content=interesse-vida_marcio_2025-vida_marcio_2025&gad_source=1&gad_campaignid=22438016383&gbraid=0AAAAADnO_8vZruZBBNhZ1Zb0rgRt6yFjd&gclid=CjwKCAjwtp7VBhBjEiwAJfpV-wwcnrhog7rxdHVuGM4bVStCZAoybRKS7fdjXK6_qos1stjAxhkjsxoC73EQAvD_BwE',
+                                    );
+                                  } else {
+                                    errorNotification(
+                                      'Somente disponível no app!',
+                                      context,
+                                    );
+                                  }
+                                }
+                              },
+                            ),
                             const SizedBox(width: 5),
                           ],
                         );
@@ -233,20 +250,27 @@ class _DashboardWidgetState extends State<DashboardWidget> {
 class DataBox extends StatelessWidget {
   final String icon;
   final String title;
+  final VoidCallback? onTap;
 
-  const DataBox({Key? key, required this.icon, required this.title})
-      : super(key: key);
+  const DataBox({
+    Key? key,
+    required this.icon,
+    required this.title,
+    this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         height: 70,
         width: 80,
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
-            color: Color(0xff2B2F37), borderRadius: BorderRadius.circular(3)),
+          color: const Color(0xff2B2F37),
+          borderRadius: BorderRadius.circular(3),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -255,14 +279,16 @@ class DataBox extends StatelessWidget {
               width: 40,
             ),
             const SizedBox(height: 6),
-            Text(title,
-                style: GoogleFonts.montserrat(
-                  textStyle: TextStyle(
-                    fontSize: 12,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ))
+            Text(
+              title,
+              style: GoogleFonts.montserrat(
+                textStyle: const TextStyle(
+                  fontSize: 12,
+                  color: Colors.white,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+            ),
           ],
         ),
       ),

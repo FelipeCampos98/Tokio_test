@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 class WebViewPage extends StatefulWidget {
-  final info;
+  final String url;
+
   const WebViewPage({
     super.key,
-    this.info,
+    required this.url,
   });
 
   @override
@@ -13,15 +14,18 @@ class WebViewPage extends StatefulWidget {
 }
 
 class _WebViewPageState extends State<WebViewPage> {
-  WebViewController controller = WebViewController();
+  late final WebViewController controller;
 
   @override
   void initState() {
     super.initState();
+
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..setBackgroundColor(const Color(0x00000000))
-      ..loadRequest(Uri.parse('https://www.tokiomarine.com.br/'));
+      ..loadRequest(
+        Uri.parse(widget.url),
+      );
   }
 
   @override
@@ -29,11 +33,10 @@ class _WebViewPageState extends State<WebViewPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60.0),
-        // here the desired height
+        preferredSize: const Size.fromHeight(60.0),
         child: AppBar(
           elevation: 0,
-          backgroundColor: Color(0xff02B2A3A),
+          backgroundColor: const Color(0xFF2B2A3A),
           automaticallyImplyLeading: false,
           title: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,23 +51,23 @@ class _WebViewPageState extends State<WebViewPage> {
                   size: 25,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
-              Container(
-                child: Text(
-                  "cadastrar",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white.withOpacity(.8),
-                  ),
+              Text(
+                'Automóvel',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.white.withOpacity(.8),
                 ),
               ),
             ],
           ),
         ),
       ),
-      body: WebViewWidget(controller: controller),
+      body: WebViewWidget(
+        controller: controller,
+      ),
     );
   }
 }
