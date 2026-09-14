@@ -16,14 +16,17 @@ getUserId() async {
 }
 
 Future<void> signInWithCpfAndPassword(
-    String _cpf, String _password, BuildContext context) async {
+  String _cpf,
+  String _password,
+  BuildContext context,
+) async {
   final SharedPreferences prefs = await SharedPreferences.getInstance();
 
   String cpf = _cpf.trim();
   String password = _password.trim();
-  String email = "$cpf@tokio.com";
+  String email = "$cpf@example.com";
 
-  print("Attempting to sign in with email: $email and password: $password");
+  print("Attempting to sign in with email: $email");
 
   try {
     UserCredential userCredential =
@@ -31,11 +34,27 @@ Future<void> signInWithCpfAndPassword(
       email: email,
       password: password,
     );
-    await prefs.setString('user_id', userCredential.user!.uid);
-    sucessNotification('Logado com sucesso!', context);
-    Navigator.pushNamed(context, '/dashboard');
+
+    await prefs.setString(
+      'user_id',
+      userCredential.user!.uid,
+    );
+
+    sucessNotification(
+      'Logado com sucesso!',
+      context,
+    );
+
+    Navigator.pushNamed(
+      context,
+      '/dashboard',
+    );
   } catch (e) {
-    errorNotification('Erro ao realizar login!', context);
+    errorNotification(
+      'Erro ao realizar login!',
+      context,
+    );
+
     print("Erro na autenticação: $e");
   }
 }
