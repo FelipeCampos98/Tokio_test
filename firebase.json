@@ -1,16 +1,1 @@
-{
-  "hosting": {
-    "public": "build/web",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
-}
+{"hosting":{"public":"build/web","ignore":["firebase.json","**/.*","**/node_modules/**"],"rewrites":[{"source":"**","destination":"/index.html"}]},"flutter":{"platforms":{"android":{"default":{"projectId":"tokio-test-campos","appId":"1:983695819853:android:734cc9a1fe8bf5e24b0804","fileOutput":"android/app/google-services.json"}},"ios":{"default":{"projectId":"tokio-test-campos","appId":"1:983695819853:ios:b840a1dbfb4bd18c4b0804","uploadDebugSymbols":false,"fileOutput":"ios/Runner/GoogleService-Info.plist"}},"dart":{"lib/firebase_options.dart":{"projectId":"tokio-test-campos","configurations":{"android":"1:983695819853:android:734cc9a1fe8bf5e24b0804","ios":"1:983695819853:ios:b840a1dbfb4bd18c4b0804","web":"1:983695819853:web:2284de091ec2ed844b0804"}}}}}}

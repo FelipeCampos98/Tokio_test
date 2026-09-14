@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "354183233916",
-    "project_id": "tokio-3a44f",
-    "storage_bucket": "tokio-3a44f.appspot.com"
+    "project_number": "983695819853",
+    "project_id": "tokio-test-campos",
+    "storage_bucket": "tokio-test-campos.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:354183233916:android:d5fa6262d9397ade7f24f9",
+        "mobilesdk_app_id": "1:983695819853:android:734cc9a1fe8bf5e24b0804",
         "android_client_info": {
           "package_name": "com.tokio.teste"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAfs9aL8dclx2lWQQDTq2T2mo38Jp2ZEFk"
+          "current_key": "AIzaSyB7j6IHe9C9lZ8zPLvh0alrQ18MbsVAfaQ"
         }
       ],
       "services": {
