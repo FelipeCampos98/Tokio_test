@@ -56,6 +56,11 @@ Também é possível usar `flutter run` e selecionar um dispositivo quando solic
 
 O APK está disponível na área de Releases do repositório.
 
+Ou gere o APK em modo debug utilizando:
+
+```bash
+flutter build apk --debug
+```
 ## Testes automatizados
 
 O projeto possui testes unitários para regras auxiliares e dados da aplicação.
