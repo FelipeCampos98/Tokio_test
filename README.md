@@ -54,7 +54,7 @@ Também é possível usar `flutter run` e selecionar um dispositivo quando solic
 
 ## APK
 
-Uma versão pronta para Android está disponível no arquivo [`Tokio_test.apk`](./Tokio_test.apk).
+O APK está disponível na área de Releases do repositório.
 
 ## Testes automatizados
 
